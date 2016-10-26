@@ -7,7 +7,7 @@ namespace ConsoleApplication
   {
     public void Configure(IApplicationBuilder app)
     {
-      app.Run(context => context.Response.WriteAsync("Hello from Startup!"));
+      app.Run(context => context.Response.WriteAsync("Hello from TestServer!"));
     }
   }
 }
