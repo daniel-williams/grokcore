@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 
@@ -11,9 +10,7 @@ namespace ConsoleApplication
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
-                .Configure(app => {
-                    app.Run(context => context.Response.WriteAsync("Hello from Kestrel!"));
-                })
+                .UseStartup<Startup>()
                 .Build();
 
             host.Run();
